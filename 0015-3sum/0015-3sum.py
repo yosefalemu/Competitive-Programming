@@ -3,7 +3,7 @@ class Solution:
         nums.sort()
         ans = []
         dict1 = {}
-        for c in range(len(nums) - 2):
+        for c in range(len(nums)):
             leftpt = c + 1
             rightpt = len(nums) - 1
             while leftpt < rightpt:
