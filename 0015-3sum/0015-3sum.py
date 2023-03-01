@@ -6,14 +6,14 @@ class Solution:
         for c in range(len(nums)):
             leftpt = c + 1
             rightpt = len(nums) - 1
+            target = -nums[c]
             while leftpt < rightpt:
-                sum = nums[c] + nums[leftpt] + nums[rightpt]
-                if sum == 0:
+                if nums[leftpt] + nums[rightpt] == target:
                     ans.append((nums[c], nums[leftpt], nums[rightpt]))
                     leftpt += 1 
                     rightpt -= 1
                 else:
-                    if sum > 0:
+                    if nums[rightpt] + nums[leftpt] > target:
                         rightpt -= 1
                     else:
                         leftpt += 1
