@@ -2,6 +2,7 @@ class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         nums.sort()
         ans = []
+        dict1 = {}
         for c in range(len(nums) - 2):
             if c > 0 and nums[c] == nums[c-1]:
                 continue
@@ -11,10 +12,6 @@ class Solution:
                 sum = nums[c] + nums[leftpt] + nums[rightpt]
                 if sum == 0:
                     ans.append((nums[c], nums[leftpt], nums[rightpt]))
-                    while leftpt < rightpt and nums[leftpt] == nums[leftpt + 1]:
-                        leftpt += 1
-                    while leftpt < rightpt and nums[rightpt] == nums[rightpt-1]:
-                        rightpt -= 1
                     leftpt += 1 
                     rightpt -= 1
                 else:
@@ -22,7 +19,14 @@ class Solution:
                         rightpt -= 1
                     else:
                         leftpt += 1
-        return ans
+        for c in ans:
+            if c in dict1:
+                pass
+            else:
+                dict1[c] = 1
+        return list(dict1.keys())
+        
+    
       
             
         
