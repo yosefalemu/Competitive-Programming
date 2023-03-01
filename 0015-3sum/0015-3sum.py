@@ -4,8 +4,6 @@ class Solution:
         ans = []
         dict1 = {}
         for c in range(len(nums) - 2):
-            if c > 0 and nums[c] == nums[c-1]:
-                continue
             leftpt = c + 1
             rightpt = len(nums) - 1
             while leftpt < rightpt:
