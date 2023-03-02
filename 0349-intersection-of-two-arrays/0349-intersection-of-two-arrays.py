@@ -11,7 +11,12 @@ class Solution:
             if c in dict1:
                 temp.append(c)
         return list(set(temp))
+                
+                
             
+        
+    
+        
         
     
                 
