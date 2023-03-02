@@ -13,7 +13,6 @@ class Solution:
                 leftpt += 1
             else:
                 rightpt += 1
-    
         return ans
                 
             
