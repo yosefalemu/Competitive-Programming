@@ -6,9 +6,9 @@ class Solution:
         ans = []
         
         
-        for word1 in words:
+        for eachword in words:
             flag = 0
-            word = word1.lower()
+            word = eachword.lower()
             if word[0] in string1:
                 temp = string1
             elif word[0] in string2:
@@ -20,7 +20,7 @@ class Solution:
                     flag = 1
                     break
             if flag == 0:
-                ans.append(word1)
+                ans.append(eachword)
         return ans
             
         
