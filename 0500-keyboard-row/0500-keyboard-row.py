@@ -1,14 +1,27 @@
 class Solution:
     def findWords(self, words: List[str]) -> List[str]:
-        string1 = "qwertyuiop"
-        string2 = "asdfghjkl"
-        string3 = "zxcvbnm"
+        string1 = list("qwertyuiop")
+        string2 = list("asdfghjkl")
+        string3 = list("zxcvbnm")
         ans = []
         
-        for c in words:
-            word = c.lower()
-            if len(set(string1 + word)) == len(string1) or len(set(string2 + word)) ==len(string2) or len(set(string3 + word)) == len(string3):
-                ans.append(c)
+        
+        for word1 in words:
+            flag = 0
+            word = word1.lower()
+            if word[0] in string1:
+                temp = string1
+            elif word[0] in string2:
+                temp = string2
+            else:
+                temp = string3
+            for c in word:
+                if c not in temp:
+                    flag = 1
+                    break
+            if flag == 0:
+                ans.append(word1)
         return ans
-                
+            
+        
         
