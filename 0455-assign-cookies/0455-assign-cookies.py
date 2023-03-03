@@ -5,8 +5,7 @@ class Solution:
         leftpt, rightpt,count = 0, 0, 0
         while leftpt < len(g) and rightpt < len(s):
             if s[rightpt] >= g[leftpt]:
-                count += 1
                 leftpt += 1
             rightpt += 1
-        return count
+        return leftpt
         
