@@ -1,13 +1,14 @@
 class Solution:
     def findWords(self, words: List[str]) -> List[str]:
-        l1="qwertyuiop"
-        l2="asdfghjkl"
-        l3="zxcvbnm"
-        res=[]
-        for word in words:
-            w=word.lower()
-            if len(set(l1+w))==len(l1) or len(set(l2+w))==len(l2) or len(set(l3+w))==len(l3) :
-                res.append(word)
-        return res
+        string1 = "qwertyuiop"
+        string2 = "asdfghjkl"
+        string3 = "zxcvbnm"
+        ans = []
+        
+        for c in words:
+            word = c.lower()
+            if len(set(string1 + word)) == len(string1) or len(set(string2 + word)) ==len(string2) or len(set(string3 + word)) == len(string3):
+                ans.append(c)
+        return ans
                 
         
