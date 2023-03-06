@@ -7,17 +7,17 @@ class Solution:
             else:
                 dict1.update({c:len(c)})
         length = min(dict1.values())
-        standard = strs[0]
+        base = strs[0]
         ans = ""
         for i in range(length):
             for j in range(len(strs)):
-                if strs[j][i] == standard[i]:
+                if strs[j][i] == base[i]:
                     flag = True
                 else:
                     flag = False
                     break
             if flag:
-                ans += standard[i]
+                ans += base[i]
             else:
                 break
         return ans
