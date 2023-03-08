@@ -4,7 +4,7 @@ class Solution:
         ans = []
         i = len(a) - 1
         j = len(b) - 1
-        while i >= 0 or j >= 0 or carry:
+        while i >= 0 or j >= 0 :
             total = carry
             if i >= 0:
                 total += int(a[i])
@@ -15,7 +15,10 @@ class Solution:
             temp = total % 2
             carry = total // 2
             ans.append(str(temp))
-        return "".join(reversed(ans))
+        if carry:
+            return "1" + "".join(reversed(ans))
+        else:
+            return "".join(reversed(ans))
                 
             
             
