@@ -5,9 +5,7 @@ class Solution:
         """
         leftpt, rigthpt = 0, len(s) - 1
         while leftpt < rigthpt:
-            temp = s[leftpt]
-            s[leftpt] = s[rigthpt]
-            s[rigthpt] = temp
+            s[leftpt], s[rigthpt] = s[rigthpt], s[leftpt]
             leftpt += 1
             rigthpt -= 1
         
