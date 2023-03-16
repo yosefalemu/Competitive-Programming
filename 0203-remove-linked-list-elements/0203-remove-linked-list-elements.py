@@ -11,10 +11,9 @@ class Solution:
         while head:
             if head.val == val:
                 temp.next = head.next
-                head = head.next
             else:
                 temp = head
-                head = head.next
+            head = head.next
         return dummy.next
                 
         
