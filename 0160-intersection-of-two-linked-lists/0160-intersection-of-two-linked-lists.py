@@ -17,7 +17,7 @@ class Solution:
                 tempB = tempB.next
             else:
                 tempB =headA
-        return tempA
+        return tempB
         
         
         
