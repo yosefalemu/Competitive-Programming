@@ -5,8 +5,10 @@
 #         self.next = next
 class Solution:
     def partition(self, head: Optional[ListNode], x: int) -> Optional[ListNode]:
-        partitionOne = ListNode()
-        partitionTwo = ListNode()
+        dummy1 = ListNode()
+        dummy2 = ListNode()
+        partitionOne = dummy1
+        partitionTwo = dummy2
         currOne = partitionOne
         currTwo = partitionTwo
         while head:
