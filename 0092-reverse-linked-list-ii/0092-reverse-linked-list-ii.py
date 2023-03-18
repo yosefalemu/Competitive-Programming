@@ -27,7 +27,6 @@ class Solution:
                     curr = curr.next
                     prev = prev.next
             count += 1
-                
         return dummy.next
                 
     
