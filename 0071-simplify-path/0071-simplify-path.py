@@ -4,9 +4,10 @@ class Solution:
         temp = ""
         for c in path + "/":
             if c == "/":
-                if temp == "..":
-                    if arr:
-                        arr.pop()
+                if arr and temp == "..":
+                    arr.pop()
+                elif temp == "..":
+                    pass
                 elif temp and temp != ".":
                     arr.append(temp)
                 else:
