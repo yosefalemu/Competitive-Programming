@@ -11,23 +11,24 @@
 class Solution {
 public:
     ListNode* deleteDuplicates(ListNode* head) {
-        ListNode* prev = head;
-        if(head == nullptr){
+        struct ListNode* p=head;
+        if(p==NULL){
             return head;
         }
-        ListNode* curr = head->next;
-        while(curr){
-            if(prev->val == curr->val){
-                prev->next = curr->next;
-                curr = curr->next;
-            }
-            else{
-                prev = curr;
-                curr = curr->next;
-                
-            }
-        }
-        return head;
-        }
-        
+        struct ListNode* q=p->next;
+       struct ListNode* ans;
+       while(q!=NULL){
+           if(p->val != q->val){
+               p=q;
+               q=q->next;
+           }
+           else{
+               p->next=q->next;
+               delete q;
+               q=p->next;
+           }
+       }
+       return head;
+
+    }
 };
