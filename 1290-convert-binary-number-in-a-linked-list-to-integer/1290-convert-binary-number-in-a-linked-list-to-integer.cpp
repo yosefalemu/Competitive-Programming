@@ -22,11 +22,23 @@ public:
         int exp = 0;
         int sum = 0;
         while(prev){
-            sum += prev->val * pow(2,exp);
+            sum += prev->val * calcuPow(exp);
             prev = prev->next;
             exp += 1;
         }
         return sum;
+        
     }
-   
+    int calcuPow(int exp){
+        int pro = 1;
+        int num = 2;
+        if(exp == 0){
+            return 1;
+        }
+        while (exp > 0){
+            pro *= num;
+            exp -= 1; 
+        }
+        return pro;
+    }
 };
