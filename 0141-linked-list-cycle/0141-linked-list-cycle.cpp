@@ -11,13 +11,13 @@ public:
     bool hasCycle(ListNode *head) {
         unordered_map<ListNode*, int>dict;
         while(head != NULL){
-            if(dict[head] == 1){
-                return true;
+            if(dict.find(head) == dict.end()){
+                dict[head] = 1;
+                head = head->next;
             }
             else{
-                dict[head] = 1;
+                return true;
             }
-            head = head->next;
         }
         return false;
     }
