@@ -24,9 +24,9 @@ public:
         if(position == 1){
             return head->next;
         }
-        int index = 1;
+        int index = 0;
         curr = head;
-        while(index < position - 1){
+        while(index < position - 2){
             curr = curr->next;
             index ++;
         }
