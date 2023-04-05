@@ -32,8 +32,5 @@ public:
         }
         curr->next = curr->next->next;
         return head;
-        
-    
-        
     }
 };
