@@ -30,7 +30,7 @@ public:
             length --;
         }
         ListNode* newHEAD = temp->next;
-        temp->next = nullptr;
+        temp->next = NULL;
         return newHEAD;
     }
 };
