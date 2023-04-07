@@ -18,13 +18,12 @@ public:
                 while(head->next && head->val == head->next->val){
                     head = head->next;
                 }
-                curr->next = head->next;
+            curr->next = head->next;
             }
             else{
                 curr = curr->next;
             }
             head = head->next;
-            
         }
         return dummy->next;
     }
