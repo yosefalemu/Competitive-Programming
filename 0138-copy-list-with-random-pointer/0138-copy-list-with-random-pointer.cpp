@@ -20,8 +20,7 @@ public:
         unordered_map<Node*,Node*>dict1;
         Node* curr = head;
         while(curr){
-            Node* temp = new Node(curr->val);
-            dict1[curr] = temp;
+            dict1[curr] = new Node(curr->val);
             curr = curr->next;
         }
         curr = head;
