@@ -14,7 +14,6 @@ public:
         int length = 1;
         ListNode* dummy = new ListNode();
         ListNode* curr = dummy;
-        ListNode* temp;
         while(head){
             if(length != left){
                 curr->next = head;
@@ -24,7 +23,7 @@ public:
             else{
                 ListNode* prev = nullptr;
                 while(length <= right){
-                    temp = head->next;
+                    ListNode* temp = head->next;
                     head->next = prev;
                     prev = head;
                     head = temp;
@@ -37,9 +36,7 @@ public:
                 }
             }
             length ++;
-            
         }
-        
         return dummy->next;
     }
 };
