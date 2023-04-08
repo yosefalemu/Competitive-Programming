@@ -25,7 +25,7 @@ public:
             slow = temp;
         }
         ListNode* curr = head;
-        ListNode* temp = head;
+        ListNode* temp;
         while(prev->next){
             temp = curr->next;
             curr->next = prev;
