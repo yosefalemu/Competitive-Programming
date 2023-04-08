@@ -9,15 +9,23 @@
 class Solution {
 public:
     ListNode *detectCycle(ListNode *head) {
-        unordered_map<ListNode*, int>dict1;
-        while(head){
-            if(dict1.find(head) != dict1.end()){
-                return head;
+        ListNode* slow = head;
+        ListNode* fast = head;
+        while(fast && fast->next){
+            slow = slow->next;
+            fast = fast->next->next;
+            if(fast == slow){
+                break;
             }
-            dict1[head] = 1;
-            head = head->next;
         }
-        return NULL;
+        if(!(fast && fast->next)){
+            return NULL;
+        }
         
+        while(head != slow){
+            head = head->next;
+            slow = slow->next;
+        }
+        return slow;
     }
 };
