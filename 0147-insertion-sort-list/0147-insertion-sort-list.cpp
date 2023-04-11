@@ -25,8 +25,7 @@ public:
             }
             else{
                 ListNode* root = newHead;
-                
-                   while(root->next){
+                while(root->next){
                     if(temp->val > root->val && temp->val <= root->next->val){
                         temp->next = root->next;
                         root->next = temp;
