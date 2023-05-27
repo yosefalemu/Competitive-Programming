@@ -7,7 +7,5 @@ class Solution:
         nums.sort(key=LargerNumKey)
         largest_num = ''.join(nums)
         return "0" if largest_num[0] == "0" else largest_num
-    def __lt__(x, y):
-        # Compare x+y with y+x in reverse order to get descending order
-        return x+y > y+x
+ 
         
