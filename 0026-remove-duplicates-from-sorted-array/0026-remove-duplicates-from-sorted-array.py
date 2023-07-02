@@ -6,14 +6,12 @@ class Solution:
         count = 1
         index = 0
         while fastpt < length:
-            if nums[slowpt] == nums[fastpt]:
-                fastpt += 1
-            else:
+            if nums[slowpt] != nums[fastpt]:
                 nums[index + 1] = nums[fastpt]
                 index += 1
                 count += 1
                 slowpt = fastpt
-                fastpt += 1
+            fastpt += 1
         return count
        
             
