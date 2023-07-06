@@ -8,7 +8,7 @@ class Solution:
             chars[i] = chars[leftpt]
             i += 1
             if rightpt - leftpt > 1:
-                for c in str(rightpt -leftpt):
+                for c in str(rightpt - leftpt):
                     chars[i] = c
                     i += 1
             leftpt = rightpt
