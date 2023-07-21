@@ -20,9 +20,10 @@ class Solution:
                 s2Count[s2[i]] += 1
             else:
                 s2Count[s2[i]] = 1
-            s2Count[s2[i - len(s1)]] -= 1
-            if s2Count[s2[i - len(s1)]] == 0:
-                del s2Count[s2[i - len(s1)]]
+            s2Count[s2[l]] -= 1
+            if s2Count[s2[l]] == 0:
+                del s2Count[s2[l]]
+            l += 1
             if s1Count == s2Count:
                 return True
         return False
