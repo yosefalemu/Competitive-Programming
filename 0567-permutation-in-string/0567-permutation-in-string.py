@@ -23,7 +23,7 @@ class Solution:
             s2Count[s2[l]] -= 1
             if s2Count[s2[l]] == 0:
                 del s2Count[s2[l]]
-            l += 1
             if s1Count == s2Count:
                 return True
+            l += 1
         return False
